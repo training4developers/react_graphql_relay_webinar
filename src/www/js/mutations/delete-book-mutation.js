@@ -42,6 +42,7 @@ export class DeleteBookMutation extends Relay.Mutation {
 			fragment on DeleteBookPayload @relay(pattern: true) {
 				viewer {					
 					books {
+                        totalCount
 						edges {
 							node {
 								id

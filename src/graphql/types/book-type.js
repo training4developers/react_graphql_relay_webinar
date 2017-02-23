@@ -16,7 +16,8 @@ export const bookType = new GraphQLObjectType({
         id: {
             type: GraphQLID,
             description: 'Id of book',
-            resolve: ({ id: bookId }) => 'book:' + bookId
+            resolve: ({ id: bookId }) => bookId
+            //resolve: ({ id: bookId }) => 'book:' + bookId
         },
         title: {
             type: GraphQLString,
@@ -38,5 +39,5 @@ export const bookType = new GraphQLObjectType({
                     .then(res => res.json())
         }
     }),
-    interfaces: () => [ nodeInterface ]
+    //interfaces: () => [ nodeInterface ]
 });

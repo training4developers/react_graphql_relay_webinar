@@ -46,7 +46,7 @@ export class EditRow extends React.Component {
 
     onSave = () => {
         const book = Object.assign({}, this.state);
-        book.price = parseInt(book.price, 10);
+        book.price = parseFloat(book.price, 10);
         book.authorId = parseInt(book.authorId, 10);
         this.props.onSave(book);
     }

@@ -8,10 +8,11 @@ import { DeleteBookMutation } from '../mutations/delete-book-mutation';
 export default Relay.createContainer(BookTool, {
 
     initialVariables: {
-        bookPageSize: 30,
+        currentPage: 0,
+        bookPageSize: 5,
         beforeBookPageSize: null,
         beforeBookCursor: null,
-        afterBookPageSize: 30,
+        afterBookPageSize: 5,
         afterBookCursor: null
     },
 

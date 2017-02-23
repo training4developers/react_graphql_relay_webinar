@@ -133,13 +133,6 @@
       "id": 6
     },
     {
-      "id": 7,
-      "title": "Crazy People",
-      "authorId": 4,
-      "category": "Humor",
-      "price": 9.99
-    },
-    {
       "id": 8,
       "title": "Quiet Ones",
       "authorId": 2,
@@ -161,20 +154,6 @@
       "price": 10.99
     },
     {
-      "id": 11,
-      "title": "True Crimes",
-      "authorId": 3,
-      "category": "Mystery",
-      "price": 4.99
-    },
-    {
-      "title": "History of the Future",
-      "category": "Historical",
-      "price": 9,
-      "authorId": 5,
-      "id": 12
-    },
-    {
       "title": "History of People",
       "category": "Historical",
       "price": 1,
@@ -184,16 +163,28 @@
     {
       "title": "Lord of the Rings",
       "category": "Inspirational",
-      "price": 29.99,
-      "authorId": "2",
+      "price": 19,
+      "authorId": 2,
       "id": 16
     },
     {
-      "title": "Lord of the Rings",
-      "category": "Inspirational",
-      "price": 29,
+      "title": "Crazy People",
+      "category": "Humor",
+      "price": 7.99,
       "authorId": 1,
       "id": 17
+    },
+    {
+      "title": "New Book",
+      "id": 18
+    },
+    {
+      "title": "New Book",
+      "id": 19
+    },
+    {
+      "title": "New Book 2",
+      "id": 20
     }
   ]
 }

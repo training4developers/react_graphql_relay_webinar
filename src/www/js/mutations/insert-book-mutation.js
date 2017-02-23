@@ -51,6 +51,7 @@ export class InsertBookMutation extends Relay.Mutation {
 			fragment on InsertBookPayload @relay(pattern: true) {
 				viewer {
 					books {
+                        totalCount
 						edges {
 							node {
 								id

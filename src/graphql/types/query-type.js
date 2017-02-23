@@ -20,36 +20,36 @@ export const query = new GraphQLObjectType({
             resolve: () => 'Have wonderful day!'
         },
 
-        node: {
-            type: nodeInterface,
-            description: 'query node by id',
-            args: {
-                id: {
-                    type: GraphQLID,
-                    description: 'id of the thing I want'
-                }
-            },
-            resolve: (_, { id }, { baseUrl }) => {
+        // node: {
+        //     type: nodeInterface,
+        //     description: 'query node by id',
+        //     args: {
+        //         id: {
+        //             type: GraphQLID,
+        //             description: 'id of the thing I want'
+        //         }
+        //     },
+        //     resolve: (_, { id }, { baseUrl }) => {
 
-                const [ nodeType, nodeId ] = id.split(':');
+        //         const [ nodeType, nodeId ] = id.split(':');
 
-                const getClass = nt => {
+        //         const getClass = nt => {
 
-                    switch(nt) {
-                        case 'book':
-                            return Book;
-                        case 'author':
-                            return Author;
-                    }
-                };
+        //             switch(nt) {
+        //                 case 'book':
+        //                     return Book;
+        //                 case 'author':
+        //                     return Author;
+        //             }
+        //         };
 
-                const nodeClass = getClass(nodeType);
+        //         const nodeClass = getClass(nodeType);
 
-                return fetch(`${baseUrl}/${nodeType}s/${nodeId}`)
-                    .then(res => res.json())
-                    .then(nodeData => Object.assign(new nodeClass(), nodeData));
-            }
-        },
+        //         return fetch(`${baseUrl}/${nodeType}s/${nodeId}`)
+        //             .then(res => res.json())
+        //             .then(nodeData => Object.assign(new nodeClass(), nodeData));
+        //     }
+        // },
 
         books: {
             type: new GraphQLList(bookType),

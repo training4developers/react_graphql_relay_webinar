@@ -18,7 +18,8 @@ export const authorType = new GraphQLObjectType({
         id: {
             type: GraphQLID,
             description: 'Id of author',
-            resolve: ({ id: authorId }) => 'author:' + authorId
+            resolve: ({ id: authorId }) => authorId
+            //resolve: ({ id: authorId }) => 'author:' + authorId
         },
         firstName: {
             type: GraphQLString,
@@ -67,6 +68,6 @@ export const authorType = new GraphQLObjectType({
         }        
 
     }),
-    interfaces: () => [ nodeInterface ]
+    //interfaces: () => [ nodeInterface ]
 
 });
